@@ -1,0 +1,78 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:Interpolator.ViewModels;assembly=Interpolator"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="350" d:DesignHeight="350"
+        x:Class="Interpolator.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Interpolator"
+        Width="400" Height="136">
+  <StackPanel>
+    <UniformGrid Columns="2">
+      <StackPanel Orientation="Horizontal">
+        <Border Margin="4">
+          <TextBlock Width="20">x1</TextBlock>
+        </Border>
+        <Border Margin="4">
+          <TextBox Width="100" Text="{Binding X1}" />
+        </Border>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Border Margin="4">
+          <TextBlock Width="20">y1</TextBlock>
+        </Border>
+        <Border Margin="4">
+          <TextBox Width="100" Text="{Binding Y1}" />
+        </Border>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Border Margin="4">
+          <TextBlock Width="20">x2</TextBlock>
+        </Border>
+        <Border Margin="4">
+          <TextBox Width="100" Text="{Binding X2}" />
+        </Border>
+        <Border Margin="4">
+          <TextBlock Foreground="Red" Text="{Binding ErrorX2}" />
+        </Border>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Border Margin="4">
+          <TextBlock Width="20">y2</TextBlock>
+        </Border>
+        <Border Margin="4">
+          <TextBox Width="100" Text="{Binding Y2}" />
+        </Border>
+        <Border Margin="4">
+          <TextBlock Foreground="Red" Text="{Binding ErrorY2}" />
+        </Border>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Border Margin="4">
+          <TextBlock Width="20">x</TextBlock>
+        </Border>
+        <Border Margin="4">
+          <TextBox Width="100" Text="{Binding X}" />
+        </Border>
+        <Border Margin="4">
+          <TextBlock Foreground="Red" Text="{Binding ErrorX}" />
+        </Border>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Border Margin="4">
+          <TextBlock Width="20">y</TextBlock>
+        </Border>
+        <Border Margin="4">
+          <TextBox Width="100" Text="{Binding Y}" IsReadOnly="True" />
+        </Border>
+      </StackPanel>
+      <Border Margin="4">
+        <Button Content="Очистить" Command="{Binding DoClear}" />
+      </Border>
+      <Border Margin="4">
+        <Button Content="Считать" Command="{Binding DoCalculate}" />
+      </Border>
+    </UniformGrid>
+  </StackPanel>
+</Window>
